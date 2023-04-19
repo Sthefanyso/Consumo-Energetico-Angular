@@ -1,0 +1,92 @@
+<form>
+
+    <h1> CALCULO CONSUMO ENERGÉTICO </h1>
+
+    <h5>Forneça as informações necessárias para que seja possível calcular o consumo energético de sua residência e o valor da tarifa mensal.</h5>
+    <br>
+    <!-- Colunas de Entrada -->
+
+    <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label>Quantidade de residentes</label>
+            <div class="mb-3">
+                <input type="number" [(ngModel)]="numResidentes" class="form-control" name="numResidentes" placeholder="Exemplo: 2">
+              </div>
+          </div>
+          <div class="col">
+            <label>Quantidade de cômodos</label>
+            <div class="mb-3">
+                <input type="number" [(ngModel)]="numComodos" class="form-control" name="numComodos" placeholder="Exemplo: 4">
+              </div>
+          </div>
+          <div class="col">
+           
+          </div>
+        </div>
+      </div>
+      <br>
+    <div class="container text-center">
+
+      </div>
+          <div class="col">
+          </div>
+       
+    <br>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <label>Quantidade de TVs:</label><br>
+            <div class="mb-3">
+                <input type="number" [(ngModel)]="quantdTV" class="form-control" name="quantdTV" placeholder="Exemplo: 1">
+              </div>
+          </div>
+          <div class="col">
+            <label>Quantidade de computadores:</label>
+            <div class="mb-3">
+                <input type="number" [(ngModel)]="quantComp" class="form-control" name="quantComp" placeholder="Exemplo: 1">
+              </div>
+          </div>
+          <div class="col">
+             
+          </div>
+        </div>
+      </div>
+    <br>
+    <div class="container text-center">
+        <div class="row">
+          <div class="col"><br>
+            <label>Valor da tarifa energética:</label>
+            <div class="mb-3">
+                <input type="number" [(ngModel)]="valorTarifa" class="form-control" name="valorTarifa" placeholder="Exemplo: 0,649">
+              </div>
+          </div>
+          <div class="col"><br>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+
+      <div class="alternativas">
+      <label>Assinale se possuir em sua casa:</label><br>
+      <input type="checkbox" id="maquinaLavar" name="maquinaLavar" [(ngModel)]="maquinaLavar">
+      <label for="maquinaLavar"> Máquina de lavar roupa</label><br>
+      <input type="checkbox" id="maquinaSecar" name="maquinaSecar" [(ngModel)]="maquinaSecar" >
+      <label for="maquinaSecar"> Secadora de roupas</label><br>
+      </div>
+  
+
+      <div class="resultado"> 
+      <p> Estimativa de consumo: {{Estimativa}} kWh/mês </p>
+      <p> Valor da conta: R$ {{valorConta}} </p>
+      </div>
+
+      <img src="https://cdn-icons-png.flaticon.com/512/6322/6322685.png">
+      <div class="d-grid gap-2 d-md-block">
+        <button id="btn" class="btn btn-primary" type="button" (click)="calcular()">Calcular</button>
+      </div>
+
+
+
+</form>
