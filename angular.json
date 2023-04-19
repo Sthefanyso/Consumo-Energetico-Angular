@@ -92,6 +92,12 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options":{
+            "baseHref": "/Consumo-Energetico-Angular/"
+          }
         }
       }
     }

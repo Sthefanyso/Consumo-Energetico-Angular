@@ -26,7 +26,7 @@ export class CalculoComponent {
     calcular(){
       
       let banho = this.numResidentes * 533.33; // 1/6*3200 = 533,33wh - um banho de 10min por dia, com um chuveiro elétrico de 3200w, valor para uma pessoa. Multiplicar pelo número de residentes.
-      let lampada = this.numComodos * 360; // 60*6= 10.800wh - uma lâmpada de 60w ligada 6h por dia. Multiplicar pelo número de cômodos.
+      let lampada = this.numComodos * 360; // 60*6= 360wh - uma lâmpada de 60w ligada 6h por dia. Multiplicar pelo número de cômodos.
       let televisao = this.quantdTV * 180; // 90*2 = 180wh - uma televisão de 90w ligada 2h por dia. 
       let computador = this.quantComp * 800; // 400*2 = 800wh - um computador de 400w ligado 2h por dia.
  
